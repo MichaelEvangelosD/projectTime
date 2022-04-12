@@ -24,6 +24,9 @@ public class AbilitySelector : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log($"Selected ability" +
+            $"\n{abilities[(int)abilityType].ToString()}");
+
         abilityManager.SetAbility(abilities[(int)abilityType]);
     }
 }
