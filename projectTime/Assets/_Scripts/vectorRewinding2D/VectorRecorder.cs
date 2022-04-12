@@ -1,54 +1,51 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VectorRecorder : MonoBehaviour
 {
-    [SerializeField, Range(1, 25)] int listCapacity;
+    public VectorHandler vectorHandler;
     [SerializeField, Range(0, 1)] float recordInterval;
-
-    [SerializeField] List<Vector2> cordsToMoveTo;
 
     private void Start()
     {
-        cordsToMoveTo = new List<Vector2>();
-        cordsToMoveTo.Capacity = listCapacity;
+        vectorHandler.ResetVectorList();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ClearVectorList();
+            vectorHandler.ResetVectorList();
 
-            StartCoroutine(StartVectorRecording());
+            StartCoroutine(StartVectorRecording(PassCordsList));
         }
     }
 
-    IEnumerator StartVectorRecording()
+    IEnumerator StartVectorRecording(Action<List<Vector2>> coroutineCallback)
     {
         Vector2 tempVector = Vector2.zero;
+        List<Vector2> tempCordList = new List<Vector2>();
+        tempCordList.Capacity = vectorHandler.GetListCapacity();
 
         Debug.Log("Started recording");
 
-        for (int i = 0; i < cordsToMoveTo.Capacity; i++)
+        for (int i = 0; i < tempCordList.Capacity; i++)
         {
             tempVector.Set(gameObject.transform.position.x, gameObject.transform.position.y);
-            cordsToMoveTo.Add(tempVector);
+            tempCordList.Add(tempVector);
 
             yield return new WaitForSeconds(recordInterval);
         }
 
         Debug.Log("Recording completed");
+
+        coroutineCallback(tempCordList);
     }
 
-    void ClearVectorList()
+    void PassCordsList(List<Vector2> list)
     {
-        cordsToMoveTo.Clear();
-    }
-
-    public List<Vector2> GetPastCordsList()
-    {
-        return cordsToMoveTo;
+        vectorHandler.SetCordList(list);
     }
 }

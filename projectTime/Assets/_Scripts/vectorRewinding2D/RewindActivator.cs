@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class RewindActivator : MonoBehaviour
 {
-    [SerializeField] VectorRecorder vectorRecorderRef;
-
-    private void Start()
-    {
-        vectorRecorderRef = GetComponent<VectorRecorder>();
-    }
+    [SerializeField] VectorHandler vectorHandler;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            VectorRewinder.S.StartRewind(gameObject, vectorRecorderRef.GetPastCordsList());
+        {
+            VectorRewinder.S.StartRewind(gameObject, vectorHandler.GetPastCordsList());
+        }
     }
 }

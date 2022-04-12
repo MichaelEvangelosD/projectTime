@@ -345,9 +345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7760678cf7918ca4e89def916f716aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listCapacity: 25
+  vectorHandler: {fileID: 11400000, guid: 109bb9842ffc3e34cb2fc9cb1bdaf139, type: 2}
   recordInterval: 0.05
-  cordsToMoveTo: []
 --- !u!114 &988964490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,4 +359,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2aed4b6438cbb4c80230a7c18e59e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vectorRecorderRef: {fileID: 0}
+  vectorRewinder: {fileID: 0}
+  vectorHandler: {fileID: 11400000, guid: 109bb9842ffc3e34cb2fc9cb1bdaf139, type: 2}
