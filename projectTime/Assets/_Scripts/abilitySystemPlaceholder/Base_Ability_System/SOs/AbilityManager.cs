@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AbilityManager", menuName = "ScriptableObjects/AbilityManager", order = 0)]
+[CreateAssetMenu(fileName = "AbilityManager", menuName = "Abilities/AbilityManager", order = 0)]
 public class AbilityManager : ScriptableObject
 {
     //The ability selected from the main menu.

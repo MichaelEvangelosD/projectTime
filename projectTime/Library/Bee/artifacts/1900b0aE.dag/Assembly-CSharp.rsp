@@ -361,6 +361,7 @@
 "Assets/_Scripts/abilitySystemPlaceholder/Base_Ability_System/SOs/Ability.cs"
 "Assets/_Scripts/abilitySystemPlaceholder/Base_Ability_System/SOs/AbilityManager.cs"
 "Assets/_Scripts/abilitySystemPlaceholder/Base_Ability_System/_MainMenu/AbilitySelector.cs"
+"Assets/_Scripts/abilitySystemPlaceholder/Expanded_Ability_System/AbilityExpanded.cs"
 "Assets/_Scripts/interface_Interactions/Enemy.cs"
 "Assets/_Scripts/interface_Interactions/I_Interactable.cs"
 "Assets/_Scripts/interface_Interactions/Player.cs"
