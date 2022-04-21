@@ -6,6 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/additiveSceneTests/ManagerScene.unity
+    guid: 7a92a9df951fe9440bd08f84fbaa7a46
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/UI_Scene.unity
+    guid: c3f8c7a72d50d8e4b891a0d7b31439d2
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/MainMenu.unity
+    guid: b21c034e697d89649b441b965719992a
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/PlayerScene.unity
+    guid: 7c4f774e446a3e54897e3781693ee82d
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/PlayerHub.unity
+    guid: dc056160e96bbd6459734b06ec0db35d
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/Level1.unity
+    guid: ce6f93f1ab05fc94685145b17bd8ec5e
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/Level2.unity
+    guid: f46d5ed16ed2c954e96e0ea888497f89
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/Level3.unity
+    guid: 391ce1e6494e3ad43bb847c6845ca00f
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/Level4.unity
+    guid: 473127cfa029a0c4e876d3bb219e1c4b
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/Level5.unity
+    guid: b803e8a25a33dec46b9b3ac21cae3456
+  - enabled: 1
+    path: Assets/Scenes/additiveSceneTests/BossLevel.unity
+    guid: b900023909dde4048821db6a988f53b8
   m_configObjects: {}
