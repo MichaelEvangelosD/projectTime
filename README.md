@@ -9,4 +9,3 @@ Things in this repo: (Updated frequently)
   3. Interactions through interfaces.
   4. Expanded ability system to work with the tiers (S.O.)
   5. Additive scene loading tests.
-  6. Nikos sucks and will destroy this project
