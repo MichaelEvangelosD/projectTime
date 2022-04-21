@@ -1,13 +1,11 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public enum GameScenes
 {
-    ManagersScene = 0,
-    UI_Scene = 1,
-    MainMenu = 2,
+    GameEntryScene = 0,
+    MainMenu = 1,
+    UI_Scene = 2,
     PlayerScene = 3,
     PlayerHub = 4,
     Level1 = 5,
@@ -22,7 +20,9 @@ public class AdditiveLoader : MonoBehaviour
 {
     public static AdditiveLoader S;
 
-    [SerializeField] GameScenes sceneToLoad;
+    [SerializeField] GameScenes gameStartScene;
+
+    GameScenes lastLoadedScene;
 
     private void Awake()
     {
@@ -31,26 +31,19 @@ public class AdditiveLoader : MonoBehaviour
 
     private void Start()
     {
-        LoadBaseScenes();
+        LoadNextScene(gameStartScene);
     }
 
-    void LoadBaseScenes()
+    public void LoadNextScene(GameScenes scene, bool unloadCurrent = false)
     {
-        SceneManager.LoadScene((int)GameScenes.UI_Scene, LoadSceneMode.Additive);
-        SceneManager.LoadScene((int)GameScenes.MainMenu, LoadSceneMode.Additive);
-    }
-
-    private void OnGUI()
-    {
-        if (GUI.Button(new Rect(10, 10, 100, 30), "Load next scene"))
+        if (unloadCurrent)
         {
-            //UnloadCurrentScene(SceneManager.GetSceneByBuildIndex((int)sceneToLoad - 1));
-            LoadNextScene(sceneToLoad);
-        }
-    }
+            SceneManager.UnloadSceneAsync((int)lastLoadedScene);
 
-    public void LoadNextScene(GameScenes scene)
-    {
+            //WE CAN MAKE THIS AN ENUMERATION TO MAKE A LOADING SCREEN
+        }
+
+        lastLoadedScene = scene;
         SceneManager.LoadScene((int)scene, LoadSceneMode.Additive);
     }
 
