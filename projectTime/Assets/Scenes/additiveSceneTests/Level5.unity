@@ -182,5 +182,9 @@ PrefabInstance:
       propertyPath: nextScene
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4666248362425225727, guid: 44494cb1717038b4fb9dba931c8dd480, type: 3}
+      propertyPath: yGUI_Value
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44494cb1717038b4fb9dba931c8dd480, type: 3}

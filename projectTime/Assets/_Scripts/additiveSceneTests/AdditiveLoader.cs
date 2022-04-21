@@ -31,20 +31,42 @@ public class AdditiveLoader : MonoBehaviour
 
     private void Start()
     {
-        LoadNextScene(gameStartScene);
+        LoadDesiredScene(gameStartScene);
     }
 
-    public void LoadNextScene(GameScenes scene, bool unloadCurrent = false)
+    public void LoadDesiredScene(GameScenes scene, bool unloadCurrent = false)
     {
         if (unloadCurrent)
         {
-            SceneManager.UnloadSceneAsync((int)lastLoadedScene);
-
             //WE CAN MAKE THIS AN ENUMERATION TO MAKE A LOADING SCREEN
+            UnloadSceneAsync(lastLoadedScene);
+        }
+
+        if (scene.Equals(GameScenes.PlayerHub))
+        {
+            _LoadPlayerScene();
+            _LoadUIScene();
         }
 
         lastLoadedScene = scene;
         SceneManager.LoadScene((int)scene, LoadSceneMode.Additive);
+    }
+
+    public void UnloadSceneAsync(GameScenes scene)
+    {
+        SceneManager.UnloadSceneAsync((int)scene);
+    }
+
+    //THESE COULD BE MOVED TO THE GAME MANAGER EVENT SYSTEM
+    //AND GET CALLED AS LoadDesiredScene(...) from there.
+    void _LoadPlayerScene()
+    {
+        LoadDesiredScene(GameScenes.PlayerScene);
+    }
+
+    void _LoadUIScene()
+    {
+        LoadDesiredScene(GameScenes.UI_Scene);
     }
 
     private void OnDestroy()

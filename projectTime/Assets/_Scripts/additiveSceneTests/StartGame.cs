@@ -15,6 +15,6 @@ public class StartGame : MonoBehaviour
     //We can add save loading in here!
     void LoadGame()
     {
-        AdditiveLoader.S.LoadNextScene(GameScenes.PlayerHub, true);
+        AdditiveLoader.S.LoadDesiredScene(GameScenes.PlayerHub, true);
     }
 }
