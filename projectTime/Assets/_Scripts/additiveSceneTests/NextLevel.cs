@@ -14,6 +14,6 @@ public class NextLevel : MonoBehaviour
 
     void LoadNextLevel(GameScenes scene)
     {
-        AdditiveLoader.S.LoadNextScene(nextScene);
+        AdditiveLoader.S.LoadNextScene(scene, true);
     }
 }
