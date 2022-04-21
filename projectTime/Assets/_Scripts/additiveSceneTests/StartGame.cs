@@ -6,9 +6,15 @@ public class StartGame : MonoBehaviour
 {
     private void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 10, 100, 30), "START"))
+        if (GUI.Button(new Rect(150, 150, 100, 30), "START"))
         {
-            //AdditiveLoader.S.LoadNextScene(GameScenes.)
+            LoadGame();
         }
+    }
+
+    //We can add save loading in here!
+    void LoadGame()
+    {
+        AdditiveLoader.S.LoadNextScene(GameScenes.PlayerHub, true);
     }
 }
