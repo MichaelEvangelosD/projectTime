@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/abilitySystemPlaceholder/Expanded/AbilityTiers.unity
+- path: Assets/Scenes/additiveSceneTests/AdditiveMainScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

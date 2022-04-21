@@ -1,7 +1,0 @@
-31/3/22 - Team Meeting (General idea and story discussion)
-4/4/22 - Team Meeting (General game flow discussion)
-7/4/22 - Team Meeting (Layed out game mechanics, player-enemy interactions, character and ability level up etc.)
-	7/4/22 - Michael (Rewind ability sample code creation)
-8/4/22 - Ability system sample code creation
-11/4/22 - Entity interactions sample code creation
-13/4/22 - Abiltiy system code expansion to work with tiers.
